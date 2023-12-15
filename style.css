@@ -1,6 +1,6 @@
 :root {
     --color-bg-card: rgba(45, 88, 153, 0.495);
-    --color-accent:rgba(45, 88, 153, 0.495);
+    --color-accent:rgba(45, 88, 153, 1);
     --color-text:rgb(255, 255, 255);
 
   }
@@ -18,7 +18,7 @@ body {
 h1, label{
     color: var(--color-text);
 }
-label{
+#wordForm>label{
     margin-bottom: 10px;
     display: block;
 }
@@ -73,6 +73,7 @@ input[type="text"]:focus {
     min-width: 80px;
     min-height: 40px;
     vertical-align: middle;
+    user-select: none; 
 }
 
 header {
@@ -95,3 +96,26 @@ header {
           var(--dot-color);
   }
 
+/*ui form stuff*/
+#uiform{
+    border-radius:20px 0 0 20px;
+    position:fixed;
+    top: 10px;
+    right: 0;
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+    border: solid 1px black;
+}
+#uiform>label{
+    color: black;
+}
+input[type="color"]{
+    appearance: none; /* Reset default styles */
+    -webkit-appearance: none; /* For older versions of Safari and Chrome */  
+    padding: 0;
+    border: none;
+    background-color: #ffffff00;
+    height: 30px;
+    width: 50px;
+}
