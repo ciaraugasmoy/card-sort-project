@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Sort</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myscript.js"></script>
+    
+</head>
+<body>
+    <form id="wordForm">
+        <label for="wordInput">Enter comma separated list:</label>
+        <input type="text" id="wordInput" name="words" required>
+        <button type="button" onclick="addNew()">Go</button>
+    </form>
+  
+    <div id="cardwrapper" class="wrapper">  
+        <div class="repositionable">example card</div>
+    </div>
+
+
+<script>
+    activateDrag();
+    function activateDrag(){
+        var elements = document.getElementsByClassName('repositionable');
+        for (var i = 0; i < elements.length; i++) {
+            dragElement(elements[i]);
+        }
+    }
+
+    function addNew(){
+        // Get the input value and split it into an array of words
+        var wordsInput = document.getElementById('wordInput').value;
+        var cardArray = wordsInput.split(',');
+        cardcode='';
+        cardArray.forEach(element => {
+             cardcode+='<div class="repositionable">'+element+'</div>';
+        });
+        document.getElementById("cardwrapper").innerHTML=cardcode;
+        activateDrag();
+}
+
+</script>
+</body>
+</html>
