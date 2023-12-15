@@ -1,3 +1,24 @@
+//ACTIVATE DRAGGING FUNCTIONALITY
+function activateDrag(){
+    var elements = document.getElementsByClassName('repositionable');
+    for (var i = 0; i < elements.length; i++) {
+        dragElement(elements[i]);
+    }
+}
+// ADD CARDS TO LIST
+function addNewCards(){
+    // Get the input value and split it into an array of words
+    var wordsInput = document.getElementById('wordInput').value;
+    var cardArray = wordsInput.split(',');
+    cardcode='';
+    cardArray.forEach(element => {
+         cardcode+='<div class="repositionable card"><p>'+element+'</p></div>';
+    });
+    document.getElementById("cardwrapper").innerHTML=cardcode;
+    activateDrag();
+}
+
+
 function dragElement(elmnt) {
   var pos1 = 0,
 		pos2 = 0,

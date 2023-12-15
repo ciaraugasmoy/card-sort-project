@@ -1,42 +1,39 @@
-html{
-	font-size: 12pt;
-	font-family: arial, monotype, sans-serif;
-	background-color: gray;
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
 }
-
 body {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	height: 100vh;
 	width: 100vw;
-	background-color: gray;
 }
-
+.myforms{
+    padding: 5%;
+    background-color: bisque;
+}
 .wrapper {
 	display: grid;
     position: absolute;
     top: 100px;
-    background-color: rgb(177, 0, 0);
-    width: 80%;
-    margin: 10%;
-    min-height:300px;
-
+    margin: 20%;
 }
 
 .repositionable {
 	margin: auto;
-	padding: 10px;
-	border-width: 1px;
-	border-radius: 10px;
-	background-color: rgba(0, 0, 0, 0.75);
-	width: 60px;
-	height: 70px;
-	color: white;
 	position: absolute;
 }
-.repositionable.text {
-	padding: 5px;
+.card{
+    padding: 10px;
+    text-align: center;
+    color: white;
+	border-width: 1px;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.75);
+    min-width: 80px;
+    min-height: 40px;
+    vertical-align: middle;
 }
 
 header {
@@ -45,4 +42,17 @@ header {
 	padding: 0.5rem 0.5rem 0.2rem 0.5rem;
 	text-align: right;
 }
+
+
+.dotted {
+    height: 100%;
+    --dot-bg: rgb(250, 250, 250);
+    --dot-color: rgb(155, 155, 155);
+    --dot-size: 1px;
+    --dot-space: 22px;
+      background:
+          linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          var(--dot-color);
+  }
 
