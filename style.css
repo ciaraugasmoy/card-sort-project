@@ -35,7 +35,7 @@ button{
     background-color: var(--color-bg-card);
 
 }
-input[type="text"] {
+input[type="text"], input[type="number"] {
     font-size: large;
     padding: 10px;
     border: 1px solid #ccc;
@@ -106,9 +106,15 @@ header {
     height: 300px;
     padding: 20px;
     border: solid 1px black;
+    z-index: 100;
 }
-#uiform>label{
+#uiform label{
     color: black;
+}
+#uiform button{
+    position: absolute;
+    bottom: 50px;
+    right:50px;
 }
 input[type="color"]{
     appearance: none; /* Reset default styles */
@@ -118,4 +124,9 @@ input[type="color"]{
     background-color: #ffffff00;
     height: 30px;
     width: 50px;
+}
+input[type="number"] {
+    margin-top: 10px;
+    width: 50px;
+    height: 20px;
 }
