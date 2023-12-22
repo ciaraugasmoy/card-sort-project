@@ -1,7 +1,7 @@
 :root {
-    --color-bg-card: rgba(45, 88, 153, 0.495);
-    --color-accent:rgba(45, 88, 153, 1);
-    --color-text:rgb(255, 255, 255);
+    --color-bg-card: #2d589980;
+    --color-accent:#2d5899;
+    --color-text:#ffffff;
 
   }
 *{
@@ -103,19 +103,34 @@ header {
     top: 10px;
     right: 0;
     width: 200px;
-    height: 300px;
+    height: 200px;
     padding: 20px;
     border: solid 1px black;
     z-index: 100;
+    transition: 1s;
+}
+.uiformhidden{
+    margin-right: -250px;
 }
 #uiform label{
     color: black;
 }
-#uiform button{
-    position: absolute;
-    bottom: 50px;
-    right:50px;
+#hidebutton{
+    float: right;
 }
+#showbutton{
+    border-radius: 20px 0 0 20px;
+    position: fixed;
+    top: 10px;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    z-index: 100;
+    transition: 1s;
+    color:black;
+}
+
 input[type="color"]{
     appearance: none; /* Reset default styles */
     -webkit-appearance: none; /* For older versions of Safari and Chrome */  

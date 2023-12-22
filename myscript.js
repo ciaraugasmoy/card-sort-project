@@ -1,3 +1,62 @@
+//show hide forms
+function hideUIForm() {
+	// Get the element by its ID
+	var uiformElement = document.getElementById('uiform');
+	uiformElement.classList.add('uiformhidden');
+	var uiformElement = document.getElementById('showbutton');
+	removeClass('showbutton', 'uiformhidden');
+  }
+
+function showUIForm(){
+	removeClass('uiform', 'uiformhidden');
+	var showbutton = document.getElementById('showbutton');
+	showbutton.classList.add('uiformhidden');
+}
+function removeClass(elementId, className) {
+	// Get the element by its ID
+	var element = document.getElementById(elementId);
+
+	// Check if the element exists
+	if (element) {
+		// Remove the specified class from the element
+		element.classList.remove(className);
+	} else {
+		console.error('Element with ID "' + elementId + '" not found.');
+	}
+}
+
+
+
+//CHANGE CARD STYLE
+window.onload = function () {
+	var bgColorInput = document.getElementById('bgcolor');
+	var txtColorInput = document.getElementById('txtcolor');
+
+	bgColorInput.addEventListener('input', function () {
+	  var hexColor = bgColorInput.value;
+	  var rgbaColor = `${hexColor}80`; // 80 in hex is equivalent to 128 in decimal (50% alpha)
+	  changeBackgroundColor(rgbaColor);
+
+	});
+	txtColorInput.addEventListener('input', function () {
+        changeColor(txtColorInput.value);
+    });
+
+}
+function changeBackgroundColor(newColor) {
+	// Use querySelectorAll to get all elements with the hardcoded class name 'repo'
+	document.querySelectorAll('.repositionable').forEach(element => {
+	  element.style.backgroundColor = newColor;
+	});
+  }
+function changeColor(newColor) {
+	// Use querySelectorAll to get all elements with the hardcoded class name 'repo'
+	document.querySelectorAll('.repositionable').forEach(element => {
+	  element.style.color = newColor;
+	});
+  }
+
+
 //ACTIVATE DRAGGING FUNCTIONALITY
 function activateDrag(){
     var elements = document.getElementsByClassName('repositionable');

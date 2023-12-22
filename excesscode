@@ -1,0 +1,12 @@
+        <div>
+            <input type="color" id="bordercolor" name="bordercolor" value="#f6b73c" /> 
+            <label for="bordercolor">Border</label>  
+            <input type="checkbox" name="borderon" id="borderon">
+        </div>
+        <div>
+            <input type="number" name="fontsize" id="fontsize" min="6" max="25">
+            <label for="fontsize">FontSize Pt</label>              
+        </div>
+
+            <button type="button" onclick="updateCardStyles('bgcolor')">Apply Changes</button>
+<!--rest of the form-->
